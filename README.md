@@ -94,5 +94,6 @@ waialua-edge-node-v11/
 ```
 
 Author: Charles Austin (Principal Solutions Architect)
+Workstation: Samsung Galaxy Z Fold 7
 
 Focus: Edge AI Architecture, Systems Engineering (INCOSE), and Python.
