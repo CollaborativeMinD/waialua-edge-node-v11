@@ -43,5 +43,5 @@ This system is modeled in SysML v2:
 - v1: Software-Defined Telemetry Pipeline
 - v2: Hardware-in-the-Loop Power Awareness
 
-## 5.0 License
-Copyright 2026 Waialua Systems Group. Mission Critical / Audit Node.
+## License
+MIT LICENSE
