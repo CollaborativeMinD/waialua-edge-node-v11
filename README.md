@@ -16,7 +16,7 @@
 
 | **Symmetrical TUI (Nominal)** | **Ghost Record Strategy** | **Fault Transparency** |
 | :---: | :---: | :---: |
-| ![Dashboard](59.jpg) | ![Thermal Gap](63.png) | ![Rejection Log](56.jpg) |
+| ![Dashboard](Dashboard.png) | ![Thermal Gap](ThermalGap.png) | ![Rejection Log](RejectionLog.png) |
 | **Status:** ✅ TRL-8 Verified | **Status:** ✅ Gap Fidelity Confirmed | **Status:** ✅ 98.5°C Rejection |
 
 ---
