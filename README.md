@@ -68,8 +68,11 @@ To run the system with real I2C/GPIO adapters enabled:
  * Map the ADC Address: Ensure 0x48 is visible on the bus.
  * Execute:
 <!-- end list -->
+
+```
 # Initialize real hardware and enter autonomous loop
 python src/waialua_master.py --mode kinetic
+```
 
 ```
 📂 Project Structure
