@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/badge/VERSION-V11_REV__A-0984e3?style=flat-square)
 ![Hardware](https://img.shields.io/badge/HARDWARE-RPI_5_%2F_LI--ION-d63031?style=flat-square&logo=raspberrypi&logoColor=white)
 ![Architecture](https://img.shields.io/badge/SYSML-v2_COMPLIANT-e17055?style=flat-square)
-![License](https://img.shields.io/badge/LICENSE-PROPRIETARY-2d3436?style=flat-square)
+![License](https://img.shields.io/badge/LICENSE-MIT-2d3436?style=flat-square)
 
 **Waialua Edge Node** is a "Zero-Fail" telemetry validation system designed for high-latency, power-constrained field environments. It implements a **Power-Adaptive Control Loop (PACE)** that dynamically adjusts polling frequency based on battery voltage, ensuring mission longevity without sacrificing data fidelity during critical phases.
 
