@@ -1,0 +1,56 @@
+name: Pylint Quality Gate
+
+on:
+  push:
+    branches: [ "main", "master", "develop" ]
+  pull_request:
+    branches: [ "main", "master", "develop" ]
+
+jobs:
+  pylint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install pylint
+
+      - name: Run pylint (fail if score < 8)
+        run: |
+          echo "Running pylint quality gate..."
+
+          FILES=$(git ls-files '*.py')
+
+          if [ -z "$FILES" ]; then
+            echo "No Python files found."
+            exit 0
+          fi
+
+          pylint $FILES --exit-zero --output-format=text > pylint_report.txt
+
+          SCORE=$(pylint $FILES 2>/dev/null | grep "rated at" | awk '{print $7}' | cut -d/ -f1)
+
+          echo "Pylint score: $SCORE"
+
+          MIN_SCORE=8.0
+
+          python - <<EOF
+import sys
+score=float("$SCORE")
+min_score=float("$MIN_SCORE")
+if score < min_score:
+    print(f"FAIL: Pylint score {score} is below required {min_score}")
+    sys.exit(1)
+else:
+    print(f"PASS: Pylint score {score} meets requirement")
+EOF
