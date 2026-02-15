@@ -85,13 +85,10 @@ waialua-edge-node-v11/
 │   ├── __init__.py               # Package marker
 │   └── waialua_master.py         # The "Brain" (Orchestrator & TUI)
 │
-├── tests/
-│   ├── validation_matrix/        # Telemetry Assets
-│   │   ├── 59.jpg
-│   │   ├── 63.png
-│   │   └── 56.jpg
-│   └── test_pace_logic.py        # Unit Tests
-│
+├── states/        # Telemetry Assets
+│   │   ├── Dashboard.png
+│   │   ├── ThermalGap.png
+│   │   └── RejectionLog.png
 ├── requirements.txt              # Polars, Altair, SMBus2
 └── README.md                     # Mission Directive
 ```
